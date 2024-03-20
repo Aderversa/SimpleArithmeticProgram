@@ -62,10 +62,14 @@ public class RandomExpressionTest {
     }
     @Test
     public void CreateExpressionTest() {
-        CreateExpression a = new CreateExpression(30, 2);
-        Map<String, String> tmp = a.getExpressionAndResult();
-        for(String exp : tmp.keySet()) {
-            System.out.println(exp);
+        // 多次求表达式，看看查重效果
+        int average = 0;
+        for(int i = 1;i <= 100; i++) {
+            CreateExpression a = new CreateExpression(1000, 2);
+            Map<String, String> tmp = a.getExpressionAndResult();
+            average = (average + tmp.size()) / 2;
+            System.out.println(tmp.size());
         }
+        System.out.println(average);
     }
 }
