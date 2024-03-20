@@ -83,13 +83,14 @@ public class CreateExpression {
         return false;
     }
 
+    /*
+     
+     */
     public void CreateOneExpression(int r) {
         Random rand = new Random();
         ArrayList<Expression> exprs = new ArrayList<>();
         ArrayList<Expression.OPTYPE> operators = new ArrayList<>();
         int operatorNums = rand.nextInt(3) + 1;
-        // int[] test = {9, 8, 5};
-        // operatorNums = test.length - 1;
         for(int i = 0;i < operatorNums + 1;i++) {
             int numerator = rand.nextInt(r);
             // numerator = test[i];
