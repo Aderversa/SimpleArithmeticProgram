@@ -65,10 +65,9 @@ public class RandomExpressionTest {
         // 多次求表达式，看看查重效果
         int average = 0;
         for(int i = 1;i <= 100; i++) {
-            CreateExpression a = new CreateExpression(1000, 2);
+            CreateExpression a = new CreateExpression(500, 2);
             Map<String, String> tmp = a.getExpressionAndResult();
             average = (average + tmp.size()) / 2;
-            System.out.println(tmp.size());
         }
         System.out.println(average);
     }
